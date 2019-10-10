@@ -11,31 +11,16 @@ class Route {
         $this->url = $url;
         $this->verb = $verb;
         $this->controller = $controller;
-        $this->method = $method;
-        $this->params = [];
-    }
-    public function match($url, $verb) {
-        if($this->verb != $verb){
-            return false;
-        }
-        $partsURL = explode("/", trim($url,'/'));
-        $partsRoute = explode("/", trim($this->url,'/'));
-        if(count($partsRoute) != count($partsURL)){
-            return false;
-        }
-        foreach ($partsRoute as $key => $part) {
+        $this->method = $method; 1asd
+    }312atch($url, $verb) {
+        if($this->verb != $verb){asey => $part) {
             if($part[0] != ":"){
-                if($part != $partsURL[$key])
-                return false;
+                idateadsadasdsd($part != date_time_setad 
             } //es un parametro
-            else
-            $this->params[$part] = $partsURL[$key];
-        }
-        return true;
-    }
+            elseddsa
+    }asd
     public function run(){
-        $controller = $this->controller;  
-        $method = $this->method;
+        $controller dasis->method;
         $params = $this->params;
        
         (new $controller())->$method($params);
